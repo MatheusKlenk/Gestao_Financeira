@@ -1,0 +1,203 @@
+/* ===== VARIÁVEIS ===== */
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1e40af;
+  --background: #f4f6f8;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --white: #ffffff;
+  --danger: #dc2626;
+}
+
+/* ===== BASE ===== */
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: var(--background);
+  color: var(--text);
+}
+
+.app-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* ===== HEADER ===== */
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 16px 20px;
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 24px;
+}
+
+.app-brand {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.app-nav {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.app-nav a {
+  text-decoration: none;
+  color: var(--text);
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.app-nav a:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.app-user {
+  margin-left: auto;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* ===== LAYOUT ===== */
+.page {
+  display: grid;
+  gap: 20px;
+}
+
+.page-title {
+  font-size: 1.6rem;
+  color: var(--primary);
+}
+
+/* ===== CARD (REUTILIZÁVEL) ===== */
+.card {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== FORM ===== */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.form-group input,
+select {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+}
+
+.form-group input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.form-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* ===== BOTÕES ===== */
+.btn-primary {
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 10px;
+  margin: 5px 3px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn-secondary {
+  background: #e5e7eb;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.btn-outline {
+  border: 1px solid var(--primary);
+  background: none;
+  color: var(--primary);
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: var(--white);
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ===== LIST ===== */
+.list {
+  display: grid;
+  gap: 10px;
+}
+
+.list-item {
+  background: var(--white);
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.list-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* ===== ESTADOS ===== */
+.form-error {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.loading,
+.empty-state {
+  color: var(--muted);
+  text-align: center;
+  padding: 20px;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  .app-header {
+    flex-wrap: wrap;
+  }
+}
